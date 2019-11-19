@@ -13,6 +13,7 @@ int main()
     scanf("%lf",&z);
     a2 = 1/2.+pow(sin(y),2.);
     b2 = abs(3-y)+(pow(z,2)/5.);
+    
     if (a2 == 0)
     {
         b1 = pow(z,2);
@@ -20,6 +21,7 @@ int main()
         b = 1.+(b1/b2)+b3;
         printf("a = Error\nb = %lf",b);
     }
+    
     if (b2 == 0)
     {
         a1 = 2.*cos(x-M_PI/6.);
@@ -27,6 +29,7 @@ int main()
         a = (a1/a2)+a3;
         printf("a = %lf\nb = Error\n",a);
     }
+    
     if ((a2 != 0)&&(b2 != 0))
     {
         a1 = 2.*cos(x-M_PI/6.);
@@ -36,8 +39,9 @@ int main()
         b3 = pow(x-5*y,1/3.)+exp(2*x-y);
         b = 1.+(b1/b2)+b3;
         printf("a = %lf\nb = %lf\n",a,b);
-    }
-    else printf("Error\n");
+    } else printf("Error\n");
+    
     system("pause");
+    
     return 0;
 }
